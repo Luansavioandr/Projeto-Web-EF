@@ -35,8 +35,8 @@ namespace Projeto_Web_EF.Controllers
         [HttpPut]
         public JsonResult AtualizarCarro(Carro carro)
         {
-            new CarroNegocio(_context).Atualizar(carro);
-            return new JsonResult("Atualizado com sucesso");
+            string resultado = new CarroNegocio(_context).Atualizar(carro);
+            return new JsonResult(resultado);
         }
 
         
