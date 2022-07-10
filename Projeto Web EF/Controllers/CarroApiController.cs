@@ -21,15 +21,15 @@ namespace Projeto_Web_EF.Controllers
         [Route("{id}")]
         public JsonResult PesquisarCarro(int id)
         {
-            var mensagepesquisar = new CarroNegocio(_context).PesquisarPorId(id);
-            return new JsonResult(mensagepesquisar);
+            var mensagempesquisar = new CarroNegocio(_context).PesquisarPorId(id);
+            return new JsonResult(mensagempesquisar);
         }
 
         //Adicionar um Carro
         [HttpPost]
         public JsonResult IncluirCarro(Carro carro)
         {
-            var mensagemincluir = new CarroNegocio(_context).Incluir(carro);
+            string mensagemincluir = new CarroNegocio(_context).Incluir(carro);
             return new JsonResult(mensagemincluir);
         }
 

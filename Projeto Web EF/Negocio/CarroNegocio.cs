@@ -75,19 +75,19 @@ namespace Projeto_Web_EF.Negocio
             }
             string resultado = "";
 
-            if (carro.Nome == null)
+            if (carro.Nome == null || carro.Nome == "")
             {
                 resultado = "Preencha o Nome";
             }
-            if (carro.Placa == null)
+            else if (carro.Placa == null || carro.Placa == "")
             {
                 resultado = "Preencha a Placa";
             }
-            if (carro.Cor == null)
+            else if (carro.Cor == null || carro.Cor == "")
             {
                 resultado = "Preencha a Cor";
             }
-            if (carro.Ano == null)
+            else if (carro.Ano == null || carro.Ano == "")
             {
                 resultado = "Preencha o Ano";
             }
