@@ -37,7 +37,7 @@ namespace Projeto_Web_EF.Negocio
             }
             string resultado = "Salvo com Sucesso";
 
-            if (carro.Nome == null)
+            if (carro.Nome == null || carro.Nome == "")
             {
                 resultado = "Preencha o Nome";
             }
@@ -45,11 +45,11 @@ namespace Projeto_Web_EF.Negocio
             {
                 resultado = "Preencha a Placa";
             }
-            else if (carro.Cor == null)
+            else if (carro.Cor == null || carro.Cor == "")
             {
                 resultado = "Preencha a Cor";
             }
-            else if (carro.Ano == null)
+            else if (carro.Ano == null || carro.Ano == "")
             {
                 resultado = "Preencha o Ano";
             }

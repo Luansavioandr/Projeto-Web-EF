@@ -21,31 +21,33 @@ namespace Projeto_Web_EF.Controllers
         [Route("{id}")]
         public JsonResult PesquisarCarro(int id)
         {
-            var carro = new CarroNegocio(_context).PesquisarPorId(id);
-            return new JsonResult(carro);
+            var mensagepesquisar = new CarroNegocio(_context).PesquisarPorId(id);
+            return new JsonResult(mensagepesquisar);
         }
 
+        //Adicionar um Carro
         [HttpPost]
         public JsonResult IncluirCarro(Carro carro)
         {
-            var mensagem = new CarroNegocio(_context).Incluir(carro);
-            return new JsonResult(mensagem);
+            var mensagemincluir = new CarroNegocio(_context).Incluir(carro);
+            return new JsonResult(mensagemincluir);
         }
 
+        //Editar um Carro
         [HttpPut]
         public JsonResult AtualizarCarro(Carro carro)
         {
-            string resultado = new CarroNegocio(_context).Atualizar(carro);
-            return new JsonResult(resultado);
+            string mensagematualizar = new CarroNegocio(_context).Atualizar(carro);
+            return new JsonResult(mensagematualizar);
         }
 
-        
+        //Deletar um Carro
         [HttpDelete]
         [Route("{id}")]
         public JsonResult DeletarCarro(int id)
         {
-            new CarroNegocio(_context).Excluir(new Carro { Id = id });
-            return new JsonResult("Deletado com Sucesso");
+            string mensagemdeletar = new CarroNegocio(_context).Excluir(new Carro { Id = id });
+            return new JsonResult(mensagemdeletar);
         }
 
     }
