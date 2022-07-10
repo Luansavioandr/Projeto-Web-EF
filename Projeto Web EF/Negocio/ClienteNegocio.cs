@@ -30,15 +30,15 @@ namespace Projeto_Web_EF.Negocio
             
             string resultado = "";
 
-            if (cliente.Nome == null)
+            if (cliente.Nome == null || cliente.Nome == "")
             {
                 resultado = "Preencha o Nome";
             }
-            if (cliente.Cpf == null)
+            else if (cliente.Cpf == null || cliente.Cpf == "")
             {
                 resultado = "Preencha a Cpf";
             }
-            if (cliente.NomeMae == null)
+            else if (cliente.NomeMae == null || cliente.NomeMae == "")
             {
                 resultado = "Preencha o NomeMae";
             }
@@ -58,15 +58,15 @@ namespace Projeto_Web_EF.Negocio
             
             string resultado = "";
 
-            if (cliente.Nome == null)
+            if (cliente.Nome == null || cliente.Nome == "")
             {
                 resultado = "Preencha o Nome";
             }
-            if (cliente.Cpf == null)
+            else if (cliente.Cpf == null || cliente.Cpf == "")
             {
                 resultado = "Preencha a Cpf";
             }
-            if (cliente.NomeMae == null)
+            else if (cliente.NomeMae == null || cliente.NomeMae == "")
             {
                 resultado = "Preencha o NomeMae";
             }
