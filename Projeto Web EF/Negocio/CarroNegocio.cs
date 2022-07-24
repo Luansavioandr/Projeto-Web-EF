@@ -73,7 +73,7 @@ namespace Projeto_Web_EF.Negocio
                     return "Ja existe";
                 }
             }
-            string resultado = "";
+            string resultado = "Salvo com Sucesso";
 
             if (carro.Nome == null || carro.Nome == "")
             {

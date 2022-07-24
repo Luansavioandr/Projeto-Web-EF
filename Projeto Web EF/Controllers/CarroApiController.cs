@@ -16,6 +16,14 @@ namespace Projeto_Web_EF.Controllers
         {
             _context = context;
         }
+        //Listar os Carros
+        [HttpGet]
+        public JsonResult PesquisarTodos()
+        {
+            List<Carro> lista = new CarroNegocio(_context).PesquisarTodos();
+            return new JsonResult(lista);
+
+        }
         //Detalhes do Carro 
         [HttpGet]
         [Route("{id}")]
